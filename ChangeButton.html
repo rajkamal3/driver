@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script>
+	function myFunction() {
+		var checkBox = document.getElementById("myCheck");
+		var text = document.getElementById("text");
+		if (checkBox.checked == true) {
+			disappearingtextarea.style.display = "block";
+			submitbutton.style.display = "none";
+			rejectbutton.style.display = "block";
+			
+		} else {
+			disappearingtextarea.style.display = "none";
+			submitbutton.style.display = "block";
+            rejectbutton.style.display = "none";
+		}
+	}
+</script>
+</head>
+<body>
+
+	<table>
+		<tr>
+			<td>Employee Id :</td>
+			<td><input type="text" name="EmployeeId"></td>
+		</tr>
+		<tr>
+			<td>First Name :</td>
+			<td><input type="text" name="firstName"></td>
+		</tr>
+		<tr>
+			<td>Last name :</td>
+			<td><input type="text" name="lastName"></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td><input type="checkbox" id="myCheck" onclick="myFunction()">Reject this shit</td>
+			<td><textarea id="disappearingtextarea" style="display: none" rows="4" cols="30" name="address" placeholder="Please enter your reason"></textarea></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input style="display: none" id="submitbutton" type="Submit" value="Sumbit"></td>
+			<td><input style="display: none" id="rejectbutton" type="Submit" value="Reject"></td>
+		</tr>
+	</table>
+
+
+
+</body>
+</html>
